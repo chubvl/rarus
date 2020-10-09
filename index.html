@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RA</title>
+
+    <style>
+        body {
+            background-color: #ffffff
+        }
+
+        /* Place the navbar at the bottom of the page, and make it stick */
+        .navbar {
+            background-color: #ffffff;
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+            min-height: 55px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 0.6px solid #aaaaaa;
+
+        }
+
+        /* Style the links inside the navigation bar */
+        .navbar a {
+
+            color: #bcbcbc;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:active {
+            background-color: #ddd;
+            color: #747474;
+            border: 0;
+            outline: none;
+        }
+
+        .navbar a:focus {
+            outline: none;
+        }
+
+
+        .navbar img {
+
+            max-width: 160px;
+        }
+
+        .rounded {
+            counter-reset: li;
+            list-style: none;
+            font: 18px "Trebuchet MS", "Lucida Sans";
+            padding: 0;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+            margin-top: 15%;
+        }
+
+        .rounded a {
+            position: relative;
+            display: block;
+            padding: 2.4em 2.4em 2.4em 3em;
+            margin: .5em 0;
+            background: #ffd972;
+            background-image: url(img/unnamed.jpg);
+            opacity: 1;
+            color: #444;
+            text-decoration: none;
+            border-radius: .3em;
+            transition: .3s ease-out;
+        }
+
+        
+
+        .rounded a:active:before {
+            transform: rotate(360deg);
+        }
+
+        .rounded a:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1.3em;
+            top: 50%;
+            margin-top: -1.3em;
+            background: #ffc400;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            border: .3em solid white;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2em;
+            transition: all .3s ease-out;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <ul class="rounded">
+        <li><a id="news" href="#">Новинки</a></li>
+        <li><a id="webinars" href="#">Вебинары и статьи</a></li>
+        <li><a id="videos" href="#">Видео-курсы</a></li>
+    </ul>
+
+
+    <div class="navbar">
+        <a href="home"><img src="img/home-page.png" alt="1" width="20%"></a>
+        <a href="books"><img src="img/book.png" alt="1" width="20%"></a>
+        <a href="settings"><img src="img/gear.png" alt="1" width="20%"></a>
+
+
+    </div>
+
+
+</body>
+
+</html>
